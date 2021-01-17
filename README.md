@@ -6,20 +6,20 @@
 ![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/wiring%20diagram.png?raw=true)  
   
   
-## Clock, Pinout and Timer Settings
-  
-![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/clock%20settings.png?raw=true)  
-  
-![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/pinout.png?raw=true)  
-  
-![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/timer2.png?raw=true)  
-  
-  
 ## Calculations
   
 Speed of sound at 22 °C is 344 m/s.  
 Sound travels 1 cm one way in just 29 us. Calculation: 0.01m / 344m/s = 29 us.  
 But the sound travels from the sensor, hits the obstacle and goes back, therefore each centimeter takes twice that much 29 us * 2 = 58us.  
+  
+  
+## Clock, Pinout and Timer Settings
+  
+![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/pinout.png?raw=true)  
+  
+![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/clock%20settings.png?raw=true)  
+  
+![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/timer2.png?raw=true)  
   
   
 ## Code Snippets
