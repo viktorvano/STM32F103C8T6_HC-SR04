@@ -5,6 +5,8 @@
 ## Wiring Diagram
 ![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/wiring%20diagram.png?raw=true)  
   
+![alt text](https://raw.githubusercontent.com/viktorvano/STM32-Bootloader/master/images/STM32F103C8T6_Bottom.jpg?raw=true)  
+  
   
 ## Calculations
   
