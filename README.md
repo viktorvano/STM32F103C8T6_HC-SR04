@@ -2,25 +2,25 @@
  Multiple ultrasonic sensors HC-SR04 example
  
  
-##Wiring Diagram
+## Wiring Diagram
 ![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/wiring%20diagram.png?raw=true)  
   
   
-##Clock, Pinout and Timer Settings
+## Clock, Pinout and Timer Settings
   
 ![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/clock%20settings.png?raw=true)  
   
 ![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/Pinout%20and%20Timer%20Settings.png?raw=true)  
   
   
-##Calculations
+## Calculations
   
 Speed of sound at 22 °C is 344 m/s.  
 Sound travels 1 cm one way in just 29 us. 0.01m / 344m/s = 29 us.  
 But the sound travels from the sensor, hits the obstacle and goes back, therefore each centimeter takes twice that much 29 us * 2 = 58us.  
   
   
-##Code Snippets
+## Code Snippets
   
 main.c  
 ```C
