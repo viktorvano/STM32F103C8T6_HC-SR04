@@ -10,7 +10,9 @@
   
 ![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/clock%20settings.png?raw=true)  
   
-![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/Pinout%20and%20Timer%20Settings.png?raw=true)  
+![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/pinout.png?raw=true)  
+  
+![alt text](https://github.com/viktorvano/STM32F103C8T6_HC-SR04/blob/main/documentation%20files/timer2.png?raw=true)  
   
   
 ## Calculations
