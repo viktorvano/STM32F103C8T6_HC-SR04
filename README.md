@@ -18,7 +18,7 @@
 ## Calculations
   
 Speed of sound at 22 °C is 344 m/s.  
-Sound travels 1 cm one way in just 29 us. 0.01m / 344m/s = 29 us.  
+Sound travels 1 cm one way in just 29 us. Calculation: 0.01m / 344m/s = 29 us.  
 But the sound travels from the sensor, hits the obstacle and goes back, therefore each centimeter takes twice that much 29 us * 2 = 58us.  
   
   
