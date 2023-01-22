@@ -30,7 +30,7 @@ void SysTickDisable()
 
 uint16_t measureDistance(GPIO_TypeDef *triggerPort, uint16_t triggerPin, GPIO_TypeDef *echoPort, uint16_t echoPin)
 {
-	if(HAL_GPIO_ReadPin(echoPort, echoPin))//skip sensor if ECHO pin is still busy
+	if(!HAL_GPIO_ReadPin(echoPort, echoPin))//skip sensor if ECHO pin is still busy
 	{
 		SysTickDisable();
 		HAL_TIM_Base_Start_IT(&htim2);
