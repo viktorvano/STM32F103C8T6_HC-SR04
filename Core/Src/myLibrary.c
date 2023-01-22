@@ -30,17 +30,23 @@ void SysTickDisable()
 
 uint16_t measureDistance(GPIO_TypeDef *triggerPort, uint16_t triggerPin, GPIO_TypeDef *echoPort, uint16_t echoPin)
 {
-	SysTickDisable();
-	HAL_TIM_Base_Start_IT(&htim2);
-	HAL_GPIO_WritePin(triggerPort, triggerPin, GPIO_PIN_SET);
-	triggerTime = 0;//reset the variable
-	asm ("nop");//to avoid program freezing
-	while(triggerTime < TriggerDuration);
-	HAL_GPIO_WritePin(triggerPort, triggerPin, GPIO_PIN_RESET);
-	while(!HAL_GPIO_ReadPin(echoPort, echoPin));
-	distance = 0;//reset the variable
-	while(HAL_GPIO_ReadPin(echoPort, echoPin));
-	HAL_TIM_Base_Stop_IT(&htim2);
-	SysTickEnable();
+	if(HAL_GPIO_ReadPin(echoPort, echoPin))//skip sensor if ECHO pin is still busy
+	{
+		SysTickDisable();
+		HAL_TIM_Base_Start_IT(&htim2);
+		HAL_GPIO_WritePin(triggerPort, triggerPin, GPIO_PIN_SET);
+		triggerTime = 0;//reset the variable
+		asm ("nop");//to avoid program freezing
+		while(triggerTime < TriggerDuration);
+		HAL_GPIO_WritePin(triggerPort, triggerPin, GPIO_PIN_RESET);
+		while(!HAL_GPIO_ReadPin(echoPort, echoPin));
+		distance = 0;//reset the variable
+		while(HAL_GPIO_ReadPin(echoPort, echoPin));
+		HAL_TIM_Base_Stop_IT(&htim2);
+		SysTickEnable();
+	}else//give max distance if ECHO pin is still busy
+	{
+		distance = 500;
+	}
 	return distance;
 }
