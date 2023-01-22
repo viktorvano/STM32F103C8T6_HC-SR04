@@ -16,11 +16,11 @@ extern TIM_HandleTypeDef htim2;
 
 #define TriggerDuration 2
 
-uint16_t distance, triggerTime, sensor;
-GPIO_TypeDef *triggerPorts[3];
-uint16_t triggerPins[3];
-GPIO_TypeDef *echoPorts[3];
-uint16_t echoPins[3];
+extern uint16_t distance, triggerTime, sensor;
+extern GPIO_TypeDef *triggerPorts[3];
+extern uint16_t triggerPins[3];
+extern GPIO_TypeDef *echoPorts[3];
+extern uint16_t echoPins[3];
 
 void SysTickEnable();
 void SysTickDisable();
